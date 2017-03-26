@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="css/lib/font-awesome.css" />
+        <link rel="stylesheet" href="css/basic.css" />
+        <link rel="stylesheet" href="css/navbar.css" />
+        <link rel="stylesheet" href="css/plan.css" />
+        <script src="js/lib/jquery.js"></script>
+        <title>UCSD Rank - Planning</title>
+    </head>
+    <body>
+        <navbar>
+            <logo>
+                <icon></icon>
+                <name>UCSD Rank</name>
+            </logo>
+            <list>
+                <item class="active">Four Year Plan</item>
+                <item>Quarter Plan</item>
+                <item>Course Catalog</item>
+            </list>
+            <account>
+                <name>Liby Lee</name>
+                <avatar>
+                    <img src="img/default_avatar.png" />
+                </avatar>
+            </account>
+        </navbar>
+        <outerbody>
+            <sidebar>
+                <sidebar-head>
+                    <label>
+                        <span>Requirements</span>
+                        <i class="fa fa-arrows-alt"></i>
+                    </label>
+                    <req-progress>
+                        <progress-bar>
+                            <progress-inner style="width: 80%"></progress-inner>
+                        </progress-bar>
+                        <percentage>80</percentage>
+                    </req-progress>
+                </sidebar-head>
+                <requirement-section>
+                    <requirement-tree>
+                        <category class="collapsed">
+                            <label>
+                                <i class="fa fa-angle-down"></i>
+                                University
+                                <percentage>0</percentage>
+                            </label>
+                            <list hidden="hidden" style="display: none">
+                                <category class="collapsed">
+                                    <label>
+                                        <i class="fa fa-angle-down"></i>
+                                        AHI
+                                    </label>
+                                </category>
+                                <category class="collapsed">
+                                    <label>
+                                        <i class="fa fa-angle-down"></i>
+                                        DEI
+                                    </label>
+                                </category>
+                            </list>
+                        </category>
+                        <category class="collapsed in-progress">
+                            <label>
+                                <i class="fa fa-angle-down"></i>
+                                College: <span class="college">Revelle</span>
+                                <percentage>30</percentage>
+                            </label>
+                            <list hidden="hidden" style="display: none">
+                                <category class="collapsed in-progress">
+                                    <label>
+                                        <i class="fa fa-angle-down"></i>
+                                        Humanity
+                                        <percentage>40</percentage>
+                                    </label>
+                                    <list hidden="hidden" style="display: none">
+                                        <course class="completed">
+                                            <label>HUM 1</label>
+                                            <unit>6</unit>
+                                        </course>
+                                        <course class="in-progress">
+                                            <label>HUM 2</label>
+                                            <unit>6</unit>
+                                        </course>
+                                        <course class="completed">
+                                            <label>HUM 3</label>
+                                            <unit>4</unit>
+                                        </course>
+                                        <course>
+                                            <label>HUM 4</label>
+                                            <unit>4</unit>
+                                        </course>
+                                        <course>
+                                            <label>HUM 5</label>
+                                            <unit>4</unit>
+                                        </course>
+                                    </list>
+                                </category>
+                            </list>
+                        </category>
+                        <category class="collapsed in-progress">
+                            <label>
+                                <i class="fa fa-angle-down"></i>
+                                Major: <span class="major">Math &amp; CS</span>
+                                <percentage>60</percentage>
+                            </label>
+                            <list hidden="hidden" style="display: none">
+                                <category class="collapsed completed">
+                                    <label>
+                                        <i class="fa fa-angle-down"></i>
+                                        Lower Division
+                                        <percentage>100</percentage>
+                                    </label>
+                                    <list hidden="hidden" style="display: none">
+                                        <category class="collapsed completed">
+                                            <label>
+                                                <i class="fa fa-angle-down"></i>
+                                                Math Sequence
+                                            </label>
+                                            <list hidden="hidden" style="display: none">
+                                                <course class="completed">
+                                                    <label>MATH 20A</label>
+                                                    <unit>4</unit>
+                                                </course>
+                                                <course class="completed">
+                                                    <label>MATH 20B</label>
+                                                    <unit>4</unit>
+                                                </course>
+                                                <course class="completed">
+                                                    <label>MATH 20C</label>
+                                                    <unit>4</unit>
+                                                </course>
+                                                <course class="completed">
+                                                    <label>MATH 20D</label>
+                                                    <unit>4</unit>
+                                                </course>
+                                                <course class="completed">
+                                                    <label>MATH 20E</label>
+                                                    <unit>4</unit>
+                                                </course>
+                                                <course>
+                                                    <label>MATH 20F</label>
+                                                    <unit>4</unit>
+                                                </course>
+                                                <divider><span>OR</span></divider>
+                                                <course class="completed">
+                                                    <label>MATH 31AH</label>
+                                                    <unit>4</unit>
+                                                </course>
+                                                <course>
+                                                    <label>MATH 31BH</label>
+                                                    <unit>4</unit>
+                                                </course>
+                                                <course>
+                                                    <label>MATH 31CH</label>
+                                                    <unit>4</unit>
+                                                </course>
+                                            </list>
+                                        </category>
+                                        <category class="collapsed completed">
+                                            <label>
+                                                <i class="fa fa-angle-down"></i>
+                                                CSE Introduction
+                                            </label>
+                                            <list hidden="hidden" style="display: none">
+                                                <course>
+                                                    <label>CSE 8A</label>
+                                                    <unit>4</unit>
+                                                </course>
+                                                <course>
+                                                    <label>CSE 8B</label>
+                                                    <unit>4</unit>
+                                                </course>
+                                                <divider><span>OR</span></divider>
+                                                <course class="completed">
+                                                    <label>CSE 11</label>
+                                                    <unit>4</unit>
+                                                </course>
+                                            </list>
+                                        </category>
+                                        <category class="collapsed completed">
+                                            <label>
+                                                <i class="fa fa-angle-down"></i>
+                                                CSE Basics
+                                            </label>
+                                            <list hidden="hidden" style="display: none">
+                                                <course class="completed">
+                                                    <label>CSE 12</label>
+                                                    <unit>4</unit>
+                                                </course>
+                                                <course class="completed">
+                                                    <label>CSE 30</label>
+                                                    <unit>4</unit>
+                                                </course>
+                                            </list>
+                                        </category>
+                                    </list>
+                                </category>
+                                <category class="collapsed in-progress">
+                                    <label>
+                                        <i class="fa fa-angle-down"></i>
+                                        Upper Division
+                                        <percentage>40</percentage>
+                                    </label>
+                                    <list hidden="hidden" style="display: none">
+                                        <course class="completed">
+                                            <label>CSE 100</label>
+                                            <unit>4</unit>
+                                        </course>
+                                        <course class="completed">
+                                            <label>CSE 101</label>
+                                            <unit>4</unit>
+                                        </course>
+                                        <course class="completed">
+                                            <label>CSE 105</label>
+                                            <unit>4</unit>
+                                        </course>
+                                    </list>
+                                </category>
+                            </list>
+                        </category>
+                        <category class="collapsed in-progress">
+                            <label>
+                                <i class="fa fa-angle-down"></i>
+                                Minor: <span class="minor">ICAM</span>
+                                <percentage>12</percentage>
+                            </label>
+                        </category>
+                    </requirement-tree>
+                </requirement-section>
+                <add-requirement>
+                    <i class="fa fa-add"></i>Add Major / Minor
+                </add-requirement>
+            </sidebar>
+            <innerbody>
+                <mainbody>
+                    <plan-view>
+                        
+                    </plan-view>
+                    <plan-view hidden="hidden">
+                        
+                    </plan-view>
+                    <plan-view hidden="hidden">
+                        
+                    </plan-view>
+                </mainbody>
+                <statusbar>
+                    <statusbar-left>
+                        <viewbtn id="view-horizon-timeline" class="active">
+                            <i class="fa fa-list"></i>
+                        </viewbtn>
+                        <viewbtn id="view-tree">
+                            <i class="fa fa-tree"></i>
+                        </viewbtn>
+                        <viewbtn id="view-calendar">
+                            <i class="fa fa-calendar"></i>
+                        </viewbtn>
+                    </statusbar-left>
+                    <statusbar-right>
+                        <span>Revelle College</span>
+                        <span>1 Major</span>
+                        <span>1 Minor</span>
+                        <span>74 Units</span>
+                    </statusbar-right>
+                </statusbar>
+                <search>
+                    <search-box>
+                        <search-box-inner>
+                            <search-box-btn>
+                                <i class="fa fa-search"></i>
+                            </search-box-btn>
+                            <search-box-input>
+                                <input placeholder="Search for course..." />
+                            </search-box-input>
+                        </search-box-inner>
+                    </search-box>
+                    <search-result>
+                        
+                    </search-result>
+                </search>
+            </innerbody>
+        </outerbody>
+    </body>
+    <script src="js/plan.js"></script>
+</html>

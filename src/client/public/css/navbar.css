@@ -1,0 +1,94 @@
+navbar {
+    position: fixed;
+    display: block;
+    top: 0;
+    left: 0;
+    height: 45px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    z-index: 1024;
+    min-width: 1080px;
+}
+
+navbar logo {
+    display: flex;
+    float: left;
+    margin: 0 15px;
+}
+
+navbar logo icon {
+    display: block;
+    padding: 6px;
+    width: 33px;
+    height: 33px;
+    background-color: rgba(245, 245, 245, 1);
+}
+
+navbar logo name {
+    display: block;
+    margin-left: 15px;
+    line-height: 45px;
+    font-size: 14px;
+    color: rgba(24, 24, 24, 1);
+}
+
+navbar list {
+    display: flex;
+    float: left;
+}
+
+navbar list item {
+    transition: 0.2s;
+    display: block;
+    line-height: 45px;
+    height: 45px;
+    padding: 0 15px;
+    cursor: pointer;
+}
+
+navbar list item.active {
+    color: rgba(88, 155, 252, 1);
+    height: 43px;
+    border-bottom: 2px solid rgba(88, 155, 252, 1);
+}
+
+navbar list item:hover, navbar account:hover {
+    background-color: rgba(179, 196, 221, 0.3);
+}
+
+navbar list item:active, navbar account:active {
+    background-color: rgba(179, 196, 221, 0.4);
+}
+
+navbar account {
+    transition: 0.2s;
+    display: flex;
+    float: right;
+    margin: 0 15px;
+    padding: 0 15px;
+    cursor: pointer;
+}
+
+navbar account name {
+    display: block;
+    line-height: 45px;
+    font-size: 14px;
+    padding: 0 10px;
+    color: rgba(88, 155, 252, 1);
+}
+
+navbar account avatar {
+    display: block;
+    margin: 5px;
+    width: 32px;
+    height: 32px;
+    border: 1.5px solid rgba(88, 155, 252, 1);
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+navbar account avatar img {
+    width: inherit;
+    height: inherit;
+}
