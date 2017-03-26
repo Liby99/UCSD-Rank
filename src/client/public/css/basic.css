@@ -11,3 +11,131 @@ body {
     color: rgba(66, 66, 66, 1);
     background-color: rgba(240, 240, 240, 1);
 }
+
+button {
+    transition: 0.4s;
+    display: block;
+    padding: 0;
+    line-height: 30px;
+    height: 30px;
+    border: none;
+    border-radius: 3px;
+    text-align: center;
+    cursor: pointer;
+    color: rgba(255, 255, 255, 1);
+    background-color: rgba(88, 155, 252, 1);
+}
+
+button:hover {
+    background-color: rgba(80, 144, 236, 1);
+}
+
+button:active {
+    background-color: rgba(75, 135, 221, 1);
+}
+
+.full-screen-btn {
+    display: flex;
+    width: 18px;
+    height: 14px;
+    padding: 8px 6px;
+    flex-wrap: wrap;
+    cursor: pointer;
+}
+
+.full-screen-btn * {
+    --color: rgba(66, 66, 66, 1);
+}
+
+.full-screen-btn:hover * {
+    --color: rgba(88, 155, 252, 1);
+}
+
+.full-screen-btn div {
+    width: 50%;
+    height: 50%;
+}
+
+.full-screen-btn div span {
+    transition: 0.2s;
+    position: relative;
+    display: block;
+    left: 0;
+    top: 0;
+    width: 6px;
+    height: 2px;
+    background-color: var(--color);
+}
+
+.full-screen-btn div span + span {
+    left: -6px;
+    top: 0;
+    height: 6px;
+    width: 2px;
+    background-color: var(--color);
+}
+
+.full-screen-btn.maximize div + div span {
+    left: 3px;
+}
+
+.full-screen-btn.maximize div + div span + span {
+    left: 1px;
+}
+
+.full-screen-btn.maximize div + div + div span {
+    left: 0px;
+    top: 5px;
+}
+
+.full-screen-btn.maximize div + div + div span + span {
+    top: 1px;
+    left: -6px;
+}
+
+.full-screen-btn.maximize div + div + div + div span {
+    left: 3px;
+    top: 5px;
+}
+
+.full-screen-btn.maximize div + div + div + div span + span {
+    left: 1px;
+    top: 1px;
+}
+
+.full-screen-btn.minimize div span {
+    top: 4px;
+    left: 2px;
+}
+
+.full-screen-btn.minimize div span + span {
+    top: 0px;
+    left: 0px;
+}
+
+.full-screen-btn.minimize div + div span {
+    top: 4px;
+    left: 1px;
+}
+
+.full-screen-btn.minimize div + div span + span {
+    left: -5px;
+    top: 0px;
+}
+
+.full-screen-btn.minimize div + div + div span {
+    left: 2px;
+    top: 1px;
+}
+
+.full-screen-btn.minimize div + div + div span + span {
+    left: 0px;
+}
+
+.full-screen-btn.minimize div + div + div + div span {
+    left: 1px;
+}
+
+.full-screen-btn.minimize div + div + div + div span + span {
+    left: -5px;
+}

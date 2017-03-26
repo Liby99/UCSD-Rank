@@ -14,7 +14,6 @@ navbar {
 navbar logo {
     display: flex;
     float: left;
-    margin: 0 15px;
 }
 
 navbar logo icon {
@@ -39,7 +38,7 @@ navbar list {
 
 navbar list item {
     transition: 0.2s;
-    display: block;
+    display: flex;
     line-height: 45px;
     height: 45px;
     padding: 0 15px;
@@ -74,7 +73,6 @@ navbar account name {
     font-size: 12px;
     padding: 0 10px;
     color: rgba(88, 155, 252, 1);
-    cursor: default;
 }
 
 navbar account avatar {

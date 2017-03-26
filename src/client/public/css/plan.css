@@ -19,11 +19,8 @@ outer-sidebar {
     z-index: 513;
 }
 
-outer-sidebar i {
-    
-}
-
 outer-sidebar verticle-list item {
+    transition: background-color 0.2s, border 0.2s, color 0.2s;
     display: block;
     float: left;
     width: auto;
@@ -92,6 +89,10 @@ sidebar-head label i {
     line-height: 30px;
     font-size: 12px;
     cursor: pointer;
+}
+
+sidebar-head label .full-screen-btn {
+    float: right;
 }
 
 sidebar-head req-progress {
@@ -243,31 +244,14 @@ requirement-tree course unit::after {
     content: ' Units';
 }
 
-add-requirement {
-    transition: 0.4s;
+#add-requirement {
     position: fixed;
-    display: block;
     bottom: 0;
     margin: 15px;
     width: 250px;
-    line-height: 30px;
-    height: 30px;
-    color: rgba(255, 255, 255, 1);
-    background-color: rgba(88, 155, 252, 1);
-    border-radius: 3px;
-    text-align: center;
-    cursor: pointer;
 }
 
-add-requirement:hover {
-    background-color: rgba(80, 144, 236, 1);
-}
-
-add-requirement:active {
-    background-color: rgba(75, 135, 221, 1);
-}
-
-sidebar.active add-requirement {
+sidebar.active #add-requirement {
     margin-left: calc(50% - 130px - 150px - 40px);
 }
 
@@ -335,16 +319,11 @@ statusbar-right span + span {
     margin-left: 10px;
 }
 
-statusbar-right button {
+statusbar-right #save-btn {
     padding: 0 15px;
     height: 25px;
     line-height: 25px;
     margin: 7.5px 0 7.5px 20px;
-    background-color: rgba(88, 155, 252, 1);
-    color: rgba(255, 255, 255, 1);
-    border-radius: 3px;
-    border: none;
-    cursor: pointer;
 }
 
 search {

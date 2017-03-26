@@ -2,6 +2,13 @@ $("outer-sidebar item").each(function () {
     $(this).css("margin-bottom", Math.ceil($(this).outerHeight() - 40) + "px", 0);
 });
 
+$("outer-sidebar item").click(function () {
+    $(this).addClass("active").siblings().removeClass("active");
+    var id = $(this).attr("id");
+    var tab = id.substring(0, id.indexOf("-btn"));
+    $("#" + tab).removeAttr("hidden").siblings().attr("hidden", "hidden");
+})
+
 $("category > label").click(function () {
     var $parent = $(this).parent();
     var $angle = $(this).children("i");
@@ -32,13 +39,15 @@ $("#search-input").blur(function () {
     }
 });
 
-$("#expand-requirement-btn").click(function () {
+$(".expand-sidebar-btn").click(function () {
     var $sidebar = $("sidebar");
     if ($sidebar.hasClass("active")) {
         $sidebar.removeClass("active");
+        $(this).removeClass("minimize").addClass("maximize");
     }
     else {
         $sidebar.addClass("active");
+        $(this).removeClass("maximize").addClass("minimize");
     }
 });
 
@@ -48,30 +57,6 @@ $("focus-frame").draggable({
     "containment": "parent"
 });
 
-// var dragging = false;
-// var originalX = 0;
-// var currentX = 0;
-// var $focusFrame = $("focus-frame");
-//
-// $("focus-frame").mousedown(function (event) {
-//     var str = $(this).css("margin-left");
-//     originalX = parseInt(str.substring(0, str.indexOf("px")));
-//     currentX = event.pageX;
-//     dragging = true;
-// });
-//
-// $("timeline-preview").mouseup(function () {
-//     dragging = false;
-// });
-//
-// $("timeline-preview").mousemove(function (event) {
-//     if (dragging) {
-//         var dx = event.pageX - currentX;
-//         var nx = originalX + dx;
-//         $focusFrame.css("left", nx + "px");
-//     }
-// });
-//
 $("timeline-preview").hover(function () {
     $(this).children("cursor").fadeIn();
 }, function () {
