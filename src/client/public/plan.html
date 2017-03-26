@@ -12,7 +12,9 @@
     <body>
         <navbar>
             <logo>
-                <icon></icon>
+                <icon>
+                    <img src="img/logo.svg" />
+                </icon>
                 <name>UCSD Rank</name>
             </logo>
             <list>
@@ -21,6 +23,10 @@
                 <item>Course Catalog</item>
             </list>
             <account>
+                <list>
+                    <item>My Information</item>
+                    <item>Setting</item>
+                </list>
                 <name>Liby Lee</name>
                 <avatar>
                     <img src="img/default_avatar.png" />
@@ -28,11 +34,14 @@
             </account>
         </navbar>
         <outerbody>
+            <outer-sidebar>
+                
+            </outer-sidebar>
             <sidebar>
                 <sidebar-head>
                     <label>
                         <span>Requirements</span>
-                        <i class="fa fa-arrows-alt"></i>
+                        <i id="expand-requirement-btn" class="fa fa-arrows-alt"></i>
                     </label>
                     <req-progress>
                         <progress-bar>
@@ -251,13 +260,13 @@
                 <statusbar>
                     <statusbar-left>
                         <viewbtn id="view-horizon-timeline" class="active">
-                            <i class="fa fa-list"></i>
+                            <img src="img/timeline_accent.svg" />
                         </viewbtn>
                         <viewbtn id="view-tree">
-                            <i class="fa fa-tree"></i>
+                            <img src="img/tree.svg" />
                         </viewbtn>
                         <viewbtn id="view-calendar">
-                            <i class="fa fa-calendar"></i>
+                            <img src="img/calendar.svg" />
                         </viewbtn>
                     </statusbar-left>
                     <statusbar-right>
@@ -274,7 +283,7 @@
                                 <i class="fa fa-search"></i>
                             </search-box-btn>
                             <search-box-input>
-                                <input placeholder="Search for course..." />
+                                <input id="search-input" placeholder="Search for course..." />
                             </search-box-input>
                         </search-box-inner>
                     </search-box>
