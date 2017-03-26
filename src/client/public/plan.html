@@ -7,6 +7,7 @@
         <link rel="stylesheet" href="css/navbar.css" />
         <link rel="stylesheet" href="css/plan.css" />
         <script src="js/lib/jquery.js"></script>
+        <script src="js/lib/jquery-ui.js"></script>
         <title>UCSD Rank - Planning</title>
     </head>
     <body>
@@ -35,9 +36,12 @@
         </navbar>
         <outerbody>
             <outer-sidebar>
-                <item class="active">Requirement</item>
-                <item>Recommend</item>
-                <item>Presets</item>
+                <verticle-list>
+                    <item id="sidebar-requirement-tab-btn" class="active">Requirement</item>
+                    <item id="sidebar-recommend-tab-btn">Recommend</item>
+                    <item id="sidebar-preset-tab-btn">Presets</item>
+                    <item id="sidebar-statistics-tab-btn">Statistics</item>
+                </verticle-list>
             </outer-sidebar>
             <sidebar>
                 <sidebar-head>
@@ -299,7 +303,205 @@
             <innerbody>
                 <mainbody>
                     <plan-view>
-                        
+                        <timeline>
+                            
+                        </timeline>
+                        <timeline-preview>
+                            <cursor hidden="hidden"></cursor>
+                            <focus-frame>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </focus-frame>
+                            <timeline-preview-inner>
+                                <ul class="years">
+                                    <li class="year">
+                                        <label>Freshman</label>
+                                        <ul class="quarters">
+                                            <li class="quarter">
+                                                <label>Fall</label>
+                                                <ul class="classes">
+                                                    <li></li>
+                                                    <li></li>
+                                                    <li></li>
+                                                    <li></li>
+                                                    <li></li>
+                                                </ul>
+                                            </li>
+                                            <li class="quarter">
+                                                <label>Winter</label>
+                                                <ul class="classes">
+                                                    <li></li>
+                                                    <li></li>
+                                                    <li></li>
+                                                </ul>
+                                            </li>
+                                            <li class="quarter">
+                                                <label>Spring</label>
+                                                <ul class="classes">
+                                                    <li></li>
+                                                    <li></li>
+                                                    <li></li>
+                                                    <li></li>
+                                                    <li></li>
+                                                    <li></li>
+                                                </ul>
+                                            </li>
+                                            <li class="quarter">
+                                                <label>Summer 1</label>
+                                                <ul class="classes">
+                                                    <li></li>
+                                                    <li></li>
+                                                </ul>
+                                            </li>
+                                            <li class="quarter">
+                                                <label>Summer 2</label>
+                                                <ul class="classes">
+                                                    
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="year">
+                                        <label>Sophomore</label>
+                                        <ul class="quarters">
+                                            <li class="quarter">
+                                                <label>Fall</label>
+                                                <ul class="classes">
+                                                    <li></li>
+                                                    <li></li>
+                                                    <li></li>
+                                                    <li></li>
+                                                </ul>
+                                            </li>
+                                            <li class="quarter">
+                                                <label>Winter</label>
+                                                <ul class="classes">
+                                                    <li></li>
+                                                    <li></li>
+                                                    <li></li>
+                                                    <li></li>
+                                                    <li></li>
+                                                </ul>
+                                            </li>
+                                            <li class="quarter">
+                                                <label>Spring</label>
+                                                <ul class="classes">
+                                                    <li></li>
+                                                    <li></li>
+                                                    <li></li>
+                                                    <li></li>
+                                                    <li></li>
+                                                </ul>
+                                            </li>
+                                            <li class="quarter">
+                                                <label>Summer 1</label>
+                                                <ul class="classes">
+                                                    <li></li>
+                                                    <li></li>
+                                                </ul>
+                                            </li>
+                                            <li class="quarter">
+                                                <label>Summer 2</label>
+                                                <ul class="classes">
+                                                    <li></li>
+                                                    <li></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="year">
+                                        <label>Junior</label>
+                                        <ul class="quarters">
+                                            <li class="quarter">
+                                                <label>Fall</label>
+                                                <ul class="classes">
+                                                    <li></li>
+                                                    <li></li>
+                                                    <li></li>
+                                                    <li></li>
+                                                    <li></li>
+                                                </ul>
+                                            </li>
+                                            <li class="quarter">
+                                                <label>Winter</label>
+                                                <ul class="classes">
+                                                    <li></li>
+                                                    <li></li>
+                                                    <li></li>
+                                                    <li></li>
+                                                </ul>
+                                            </li>
+                                            <li class="quarter">
+                                                <label>Spring</label>
+                                                <ul class="classes">
+                                                    <li></li>
+                                                    <li></li>
+                                                    <li></li>
+                                                    <li></li>
+                                                    <li></li>
+                                                </ul>
+                                            </li>
+                                            <li class="quarter">
+                                                <label>Summer 1</label>
+                                                <ul class="classes">
+                                                    
+                                                </ul>
+                                            </li>
+                                            <li class="quarter">
+                                                <label>Summer 2</label>
+                                                <ul class="classes">
+                                                    
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="year">
+                                        <label>Senior</label>
+                                        <ul class="quarters">
+                                            <li class="quarter">
+                                                <label>Fall</label>
+                                                <ul class="classes">
+                                                    <li></li>
+                                                    <li></li>
+                                                    <li></li>
+                                                    <li></li>
+                                                </ul>
+                                            </li>
+                                            <li class="quarter">
+                                                <label>Winter</label>
+                                                <ul class="classes">
+                                                    <li></li>
+                                                    <li></li>
+                                                    <li></li>
+                                                    <li></li>
+                                                </ul>
+                                            </li>
+                                            <li class="quarter">
+                                                <label>Spring</label>
+                                                <ul class="classes">
+                                                    <li></li>
+                                                    <li></li>
+                                                    <li></li>
+                                                </ul>
+                                            </li>
+                                            <li class="quarter">
+                                                <label>Summer 1</label>
+                                                <ul class="classes">
+                                                    
+                                                </ul>
+                                            </li>
+                                            <li class="quarter">
+                                                <label>Summer 2</label>
+                                                <ul class="classes">
+                                                    
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </timeline-preview-inner>
+                        </timeline-preview>
                     </plan-view>
                     <plan-view hidden="hidden">
                         
@@ -325,6 +527,7 @@
                         <span>1 Major</span>
                         <span>1 Minor</span>
                         <span>74 Units</span>
+                        <button>Save &amp; Back</button>
                     </statusbar-right>
                 </statusbar>
                 <search>

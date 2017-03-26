@@ -12,37 +12,39 @@ outer-sidebar {
     display: block;
     top: 45px;
     left: 0;
-    width: 30px;
+    width: 40px;
     height: calc(100% - 45px);
     background-color: rgba(250, 250, 250, 1);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     z-index: 513;
 }
 
-outer-sidebar item {
-    transition: 0.2s;
+outer-sidebar i {
+    
+}
+
+outer-sidebar verticle-list item {
     display: block;
     float: left;
     width: auto;
     transform-origin: left top 0;
     transform: rotate(90deg);
-    margin-left: 30px;
-    margin-bottom: 70px;
-    line-height: 30px;
+    margin-left: 40px;
+    line-height: 40px;
     padding: 0 15px;
     cursor: pointer;
 }
 
-outer-sidebar item:hover {
+outer-sidebar verticle-list item:hover {
     background-color: rgba(240, 240, 240, 1);
 }
 
-outer-sidebar item:active {
+outer-sidebar verticle-list item:active {
     background-color: rgba(230, 230, 230, 1);
 }
 
-outer-sidebar item.active {
-    line-height: 28px;
+outer-sidebar verticle-list item.active {
+    line-height: 38px;
     border-bottom: 2px solid rgba(88, 155, 252, 1);
     color: rgba(88, 155, 252, 1);
 }
@@ -51,9 +53,9 @@ sidebar {
     position: fixed;
     transition: 0.4s;
     display: block;
-    left: 30px;
+    left: 40px;
     height: calc(100% - 45px);
-    width: 290px;
+    width: 280px;
     overflow-y: scroll;
     -webkit-overflow-scrolling: touch;
     background-color: rgba(250, 250, 250, 1);
@@ -63,7 +65,7 @@ sidebar {
 
 sidebar.active {
     padding: 0 150px;
-    width: calc(100% - 30px - 300px);
+    width: calc(100% - 40px - 300px);
 }
 
 sidebar-head {
@@ -247,7 +249,7 @@ add-requirement {
     display: block;
     bottom: 0;
     margin: 15px;
-    width: 260px;
+    width: 250px;
     line-height: 30px;
     height: 30px;
     color: rgba(255, 255, 255, 1);
@@ -266,7 +268,7 @@ add-requirement:active {
 }
 
 sidebar.active add-requirement {
-    margin-left: calc(50% - 130px - 150px - 30px);
+    margin-left: calc(50% - 130px - 150px - 40px);
 }
 
 innerbody {
@@ -333,9 +335,21 @@ statusbar-right span + span {
     margin-left: 10px;
 }
 
+statusbar-right button {
+    padding: 0 15px;
+    height: 25px;
+    line-height: 25px;
+    margin: 7.5px 0 7.5px 20px;
+    background-color: rgba(88, 155, 252, 1);
+    color: rgba(255, 255, 255, 1);
+    border-radius: 3px;
+    border: none;
+    cursor: pointer;
+}
+
 search {
     position: fixed;
-    top: 95px;
+    top: 75px;
     right: 50px;
     width: 250px;
     z-index: 128;
@@ -391,4 +405,122 @@ search-box-input input {
     width: 200px;
     border: none;
     outline: none;
+}
+
+plan-view {
+    -webkit-user-select: none;
+    cursor: default;
+}
+
+timeline-preview {
+    position: fixed;
+    display: block;
+    left: 320px;
+    bottom: 40px;
+    width: calc(100% - 360px);
+    padding: 0 20px;
+    height: 120px;
+    border-top: 1px solid rgba(200, 200, 200, 1);
+    z-index: 64;
+}
+
+timeline-preview cursor {
+    position: absolute;
+    margin: 10px 0;
+    display: none;
+    height: 100px;
+    width: 1px;
+    background-color: rgba(180, 180, 180, 1);
+}
+
+timeline-preview focus-frame {
+    --curr-border-color: rgba(200, 200, 200, 1);
+    position: absolute;
+    display: block;
+    margin: 20px 0;
+    width: 100px;
+    height: 80px;
+    cursor: move !important;
+}
+
+timeline-preview focus-frame span {
+    transition: 0.2s;
+    display: block;
+    width: 100%;
+    height: 78px;
+    border: 1px solid var(--curr-border-color);
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+timeline-preview focus-frame span + span {
+    transition: 0.2s;
+    display: block;
+    content: '';
+    width: 40px;
+    height: 4px;
+    background-color: rgba(250, 250, 250, 1);
+    border: 1px solid var(--curr-border-color);
+    border-radius: 2px;
+    margin: 0 auto;
+    margin-top: -82px;
+}
+
+timeline-preview focus-frame span + span + span {
+    margin-top: 73px;
+}
+
+timeline-preview focus-frame:hover {
+    --curr-border-color: rgba(88, 155, 252, 1);
+}
+
+timeline-preview-inner {
+    display: block;
+    margin: 25px 0;
+    font-size: 10px;
+}
+
+timeline-preview-inner ul {
+    list-style: none;
+    padding: 0;
+}
+
+timeline-preview-inner .years {
+    display: flex;
+}
+
+timeline-preview-inner .year {
+    width: 25%;
+}
+
+timeline-preview-inner .quarters {
+    display: flex;
+}
+
+timeline-preview-inner .quarter {
+    width: 20%;
+}
+
+timeline-preview-inner label {
+    display: block;
+    text-align: center;
+}
+
+timeline-preview-inner .year > label {
+    font-size: 12px;
+}
+
+timeline-preview-inner .quarter > label {
+    color: rgba(120, 120, 120, 1);
+}
+
+timeline-preview-inner .classes {
+    margin-top: 5px;
+}
+
+timeline-preview-inner .classes li {
+    margin: 2px 8px;
+    height: 4px;
+    border-radius: 2px;
+    background-color: rgba(88, 155, 252, 1);
 }
