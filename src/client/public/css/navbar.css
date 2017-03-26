@@ -52,12 +52,12 @@ navbar list item.active {
     border-bottom: 2px solid rgba(88, 155, 252, 1);
 }
 
-navbar list item:hover, navbar account:hover {
-    background-color: rgba(179, 196, 221, 0.3);
+navbar list item:hover, navbar account list item:hover {
+    background-color: rgba(245, 245, 245, 1);
 }
 
-navbar list item:active, navbar account:active {
-    background-color: rgba(179, 196, 221, 0.4);
+navbar list item:active, navbar account list item:active {
+    background-color: rgba(235, 235, 235, 1);
 }
 
 navbar account {
@@ -66,22 +66,22 @@ navbar account {
     float: right;
     margin: 0 15px;
     padding: 0 15px;
-    cursor: pointer;
 }
 
 navbar account name {
     display: block;
     line-height: 45px;
-    font-size: 14px;
+    font-size: 12px;
     padding: 0 10px;
     color: rgba(88, 155, 252, 1);
+    cursor: default;
 }
 
 navbar account avatar {
     display: block;
-    margin: 5px;
-    width: 32px;
-    height: 32px;
+    margin: 6px;
+    width: 30px;
+    height: 30px;
     border: 1.5px solid rgba(88, 155, 252, 1);
     border-radius: 50%;
     overflow: hidden;

@@ -30,6 +30,12 @@ $("#search-input").blur(function () {
     }
 });
 
-$("expand-requirement-btn").click(function () {
-    
+$("#expand-requirement-btn").click(function () {
+    var $sidebar = $("sidebar");
+    if ($sidebar.hasClass("active")) {
+        $sidebar.removeClass("active");
+    }
+    else {
+        $sidebar.addClass("active");
+    }
 });

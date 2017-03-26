@@ -7,17 +7,63 @@ outerbody {
     width: 100%;
 }
 
-sidebar {
+outer-sidebar {
     position: fixed;
     display: block;
+    top: 45px;
     left: 0;
+    width: 30px;
     height: calc(100% - 45px);
-    width: 280px;
+    background-color: rgba(250, 250, 250, 1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    z-index: 513;
+}
+
+outer-sidebar item {
+    transition: 0.2s;
+    display: block;
+    float: left;
+    width: auto;
+    transform-origin: left top 0;
+    transform: rotate(90deg);
+    margin-left: 30px;
+    margin-bottom: 70px;
+    line-height: 30px;
+    padding: 0 15px;
+    cursor: pointer;
+}
+
+outer-sidebar item:hover {
+    background-color: rgba(240, 240, 240, 1);
+}
+
+outer-sidebar item:active {
+    background-color: rgba(230, 230, 230, 1);
+}
+
+outer-sidebar item.active {
+    line-height: 28px;
+    border-bottom: 2px solid rgba(88, 155, 252, 1);
+    color: rgba(88, 155, 252, 1);
+}
+
+sidebar {
+    position: fixed;
+    transition: 0.4s;
+    display: block;
+    left: 30px;
+    height: calc(100% - 45px);
+    width: 290px;
     overflow-y: scroll;
     -webkit-overflow-scrolling: touch;
     background-color: rgba(250, 250, 250, 1);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     z-index: 512;
+}
+
+sidebar.active {
+    padding: 0 150px;
+    width: calc(100% - 30px - 300px);
 }
 
 sidebar-head {
@@ -89,8 +135,18 @@ requirement-tree {
     user-select: none;
 }
 
+sidebar.active requirement-tree {
+    display: flex;
+}
+
+sidebar.active requirement-tree > category {
+    
+}
+
 requirement-tree category {
-    display: block;
+    transition: 0.4s;
+    display: absolute;
+    width: 100%;
 }
 
 requirement-tree category.collapsed > label > i {
@@ -186,11 +242,12 @@ requirement-tree course unit::after {
 }
 
 add-requirement {
+    transition: 0.4s;
     position: fixed;
     display: block;
     bottom: 0;
     margin: 15px;
-    width: 250px;
+    width: 260px;
     line-height: 30px;
     height: 30px;
     color: rgba(255, 255, 255, 1);
@@ -208,12 +265,16 @@ add-requirement:active {
     background-color: rgba(75, 135, 221, 1);
 }
 
+sidebar.active add-requirement {
+    margin-left: calc(50% - 130px - 150px - 30px);
+}
+
 innerbody {
     display: block;
     position: fixed;
     top: 45px;
-    left: 280px;
-    width: calc(100% - 280px);
+    left: 320px;
+    width: calc(100% - 320px);
     height: calc(100% - 45px);
 }
 
@@ -224,7 +285,7 @@ mainbody {
 statusbar {
     position: fixed;
     bottom: 0;
-    width: calc(100% - 280px);
+    width: calc(100% - 320px);
     height: 40px;
     background-color: rgba(250, 250, 250, 1);
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
