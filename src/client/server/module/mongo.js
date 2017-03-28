@@ -10,11 +10,17 @@ module.exports = {
             this._config = getData("mongo");
         }
     },
+    getAuthentication: function () {
+        if (this._config.username) {
+            return this.config.username + ":" + this.config.password + "@";
+        }
+        return "";
+    },
     getPort: function () {
         return port = this._config.port ? this._config.port : this.DEFAULT_PORT;
     },
     getUrl: function () {
-        var url = "mongodb://" + this._config.host + ":" + this.getPort() + "/" + this._config.database;
+        return "mongodb://" + this.getAuthentication() + this._config.host + ":" + this.getPort() + "/" + this._config.database;
     },
     init: function (callback) {
         var self = this;

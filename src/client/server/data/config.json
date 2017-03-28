@@ -1,6 +1,13 @@
 {
     "port": 8192,
     "name": "UCSD Rank",
-    "base": "./public",
-    ""
+    "base": "public/",
+    "static": [
+        "js/",
+        "css/",
+        "view/",
+        "img/",
+        "fonts/",
+        "res/"
+    ]
 }
