@@ -1,0 +1,25 @@
+{
+  "name": "ucsd-rank-client",
+  "version": "0.0.1",
+  "description": "ucsd student four year planner",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/Liby99/UCSD-Rank.git"
+  },
+  "keywords": [
+    "Course",
+    "Curriculum",
+    "Planner",
+    "4-Year-Plan"
+  ],
+  "author": "Liby Lee",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Liby99/UCSD-Rank/issues"
+  },
+  "homepage": "https://github.com/Liby99/UCSD-Rank#readme"
+}
